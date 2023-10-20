@@ -4,7 +4,7 @@
 ?>
 
 
-<body>
+<body style="overflow-x: hidden;">
         <div class="wrapper">
             <!-- Top Bar Start -->
             <div class="top-bar">
@@ -126,7 +126,7 @@
                                 <div class="modal fade" id="evaluationModal" tabindex="-1" role="dialog" aria-labelledby="evaluationModalLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
+                                  <div class="modal-content" style="margin-top: -900px">
                                     <div class="modal-header">
                                       <h5 class="modal-title" id="evaluationModalLabel">Entrez vos informations</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -285,7 +285,7 @@
 
 
             <!-- Feature Start-->
-            <div class="containere">
+            <div class="containere" style="padding: 45px 0;">
                 
                 <div class="title-container">
                     <div class="title-line">Fiers d'être</div>
@@ -1012,8 +1012,7 @@ window.addEventListener('resize', stopVideoScrolling);
                         </div>
                         <div class="imgbx" style="--i:5;" data-id="cont5">
                             <img src="<?= get_stylesheet_directory_uri() . "/assets/" ?>img/emp4.png" alt="">
-                        </div>
-                        
+                        </div> 
                     </div>
     
                     <div class="cont">
@@ -1215,7 +1214,7 @@ window.addEventListener('resize', stopVideoScrolling);
                     </form>
           
                     <div>
-                      <img src = "img/contact.gif" alt = "">
+                      <img src = "<?= get_stylesheet_directory_uri() . "/assets/" ?>img/contact.gif" alt = "">
                     </div>
                   </div>
                 </div>
