@@ -442,10 +442,10 @@
            
             <div class="card-container">
                 <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/lead.gif');">
+                    <div class="front" style="background-image: url('img/lead.gif');">
                         
                       <h1 class="mod" style="margin-bottom: 90px;">Génération De Leads</h1>
-                      <button class="bot" style="color: #fff !important;background-color: #5E81F3;">View Details</button>
+                      <button class="bot">View Details</button>
                     </div>
                     <div class="back">
                         <p class="para">
@@ -466,7 +466,7 @@
                                             
                   </div>
                   <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/stra.gif');">
+                    <div class="front" style="background-image: url('img/stra.gif');">
                       <h1 class="mod" style="margin-bottom: 120px;">Stratégie Digitale</h1>
                       <button class="bot">View Details</button>
                     </div> 
@@ -485,7 +485,7 @@
                       </div>
                   </div>
                   <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/g2.jpg');">
+                    <div class="front" style="background-image: url('img/g2.jpg');">
                       <h1 class="mod" style="margin-bottom: 100px;">Creation De Contenus​</h1>
                       <button class="bot">View Details</button>
                     </div>
@@ -504,7 +504,7 @@
                     </div>
                   </div>
                   <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/sea.gif');">
+                    <div class="front" style="background-image: url('img/sea.gif');">
                       <h1 class="mod" style="margin-bottom: 120px; margin-right :180px;">SEA</h1>
                       <button class="bot">View Details</button>
                     </div>
@@ -523,7 +523,7 @@
                     </div>
                   </div>
                   <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/seo.gif');">
+                    <div class="front" style="background-image: url('img/seo.gif');">
                       <h1 class="mod" style="margin-bottom: 120px; margin-left :220px;">SEO</h1>
                       <button class="bot">View Details</button>
                     </div>
@@ -542,7 +542,7 @@
                     </div>
                   </div>
                   <div class="card">
-                    <div class="front" style="background-image: url('<?= get_stylesheet_directory_uri() . "/assets/" ?>img/social.gif');">
+                    <div class="front" style="background-image: url('img/social.gif');">
                       <h1 class="mod" style="margin-bottom: 120px; margin-right:150px;" >Social ADS</h1>
                       <button class="bot">View Details</button>
                     </div>
@@ -979,20 +979,20 @@ window.addEventListener('resize', stopVideoScrolling);
 
 
             <!-- Team Start -->
-            <!-- <div class="team">
+            <div class="team">
                 <div class="container">
                     <div class="section-header text-center" style="margin-left: 160px;">
                         <p>Our Team</p>
                         <h2>Meet Our Engineer</h2>
                       <h2><div class="text-3">Engineering <span class="typing"></span></div></h2>  
-            <script>
-                var typed = new Typed(".typing", {
-                    strings: ["Designers", "Developers", "Innovators", "Collaborators"],
-                    typeSpeed: 80,
-                    backSpeed: 80,
-                    loop: true,
-                });
-            </script>
+    <script>
+        var typed = new Typed(".typing", {
+            strings: ["Designers", "Developers", "Innovators", "Collaborators"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            loop: true,
+        });
+    </script>
                     </div>
                     
                 <div class="contient">
@@ -1095,7 +1095,7 @@ window.addEventListener('resize', stopVideoScrolling);
                      </ul>
                  </div>
                 </div>
-            </div> -->
+            </div>
             <!-- <div class="contbx " id="cont6">
                 <div class="caard">
                  <div class="imgbx">
@@ -1128,9 +1128,9 @@ window.addEventListener('resize', stopVideoScrolling);
                  </div>
                 </div>
             </div> -->
-                    <!-- </div>
-                </div> -->
-                <!-- <script>
+                    </div>
+                </div>
+                <script>
                     // Sélectionnez tous les éléments avec la classe '.imgbx'
                     let imgbx = document.querySelectorAll('.imgbx');
                     // Sélectionnez tous les éléments avec la classe '.contbx'
@@ -1157,7 +1157,7 @@ window.addEventListener('resize', stopVideoScrolling);
                 </script>
                 
                 </div> 
-            </div><br><br><br> -->
+            </div><br><br><br>
             <!-- Team End -->
             
 

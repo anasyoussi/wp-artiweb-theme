@@ -2499,10 +2499,12 @@ margin-right: 150px;
      color:#0c0d11;
      border: 1px solid #fff;
      padding: 10px 20px;
-     background-color: transparent;
+     /* background-color: transparent; */
      z-index: 1;
      border-radius: 10px;
      font-size: 20px;
+     color: #fff !important;
+    background-color: #5E81F3 !important;
  }
  .mod{
      color:#040507;
