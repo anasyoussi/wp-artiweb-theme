@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Builderz - Construction Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+    <!-- cdn fonawsam  -->
+    <script src="https://kit.fontawesome.com/3477ae541c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- swipper cdn  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/styles.css" rel="stylesheet">
+    <style>  /*******************************/
+        /********* General CSS *********/
+        /*******************************/
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #666666;
+            background: hsl(0, 0%, 80%);
+            ;
+            ;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #05183d;
+        }
+        
+        a {
+            color: #666666;
+            transition: .3s;
+        }
+        
+        a:hover,
+        a:active,
+        a:focus {
+            color: skyblue;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        .btn:focus {
+            box-shadow: none;
+        }
+        
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1366px;
+            margin: 0 auto;
+            background: hsl(0, 0%, 98%);
+            ;
+            ;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            display: none;
+            background: skyblue;
+            color: #121518;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            line-height: 1;
+            font-size: 22px;
+            right: 15px;
+            bottom: 15px;
+            transition: background 0.5s;
+            z-index: 9;
+        }
+        
+        .back-to-top:hover {
+            color: skyblue;
+            background: #121518;
+        }
+        
+        .back-to-top i {
+            padding-top: 10px;
+        }
+        
+        .btn {
+            transition: .3s;
+        }
+        /**********************************/
+        /********** Top Bar CSS ***********/
+        /**********************************/
+        
+        .top-bar {
+            position: relative;
+            height: 90px;
+            background: hsl(0, 0%, 98%);
+        }
+        
+        .top-bar .logo {
+            padding: 15px 0;
+            text-align: left;
+            overflow: hidden;
+        }
+        
+        .top-bar .logo h1 {
+            margin: 0;
+            color: #030f27;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+        
+        .top-bar .logo img {
+            max-width: 100%;
+            max-height: 60px;
+        }
+        
+        .top-bar .top-bar-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .top-bar .top-bar-icon {
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .top-bar .top-bar-icon [class^="flaticon-"]::before {
+            margin: 0;
+            color: #030f27;
+            font-size: 40px;
+        }
+        
+        .top-bar .top-bar-text {
+            padding-left: 15px;
+        }
+        
+        .top-bar .top-bar-text h3 {
+            margin: 0 0 5px 0;
+            color: #030f27;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .top-bar .top-bar-text p {
+            margin: 0;
+            color: #030f27;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        
+        @media (min-width: 992px) {
+            .top-bar {
+                padding: 0 60px;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            .top-bar .logo {
+                text-align: center;
+            }
+        }
+        /**********************************/
+        /*********** Nav Bar CSS **********/
+        /**********************************/
+        
+        .nav-bar {
+            position: relative;
+            background: hsl(0, 0%, 98%);
+            transition: .3s;
+        }
+        
+        .nav-bar .container-fluid {
+            padding: 0;
+        }
+        
+        .nav-bar.nav-sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 1366px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+            z-index: 999;
+        }
+        
+        .nav-bar .navbar {
+            height: 100%;
+            background: #030f27 !important;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            padding: 10px 10px 8px 10px;
+            color: #ffffff;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: skyblue;
+            transition: none;
+        }
+        
+        .nav-bar .dropdown-menu {
+            margin-top: 0;
+            border: 0;
+            border-radius: 0;
+            background: #f8f9fa;
+        }
+        
+        .nav-bar .btn {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+        }
+        
+        .nav-bar .btn:hover {
+            color: #030f27;
+            background: skyblue;
+            border-color: skyblue;
+        }
+        
+        @media (min-width: 992px) {
+            .nav-bar {
+                padding: 0 75px;
+            }
+            .nav-bar.nav-sticky {
+                padding: 0;
+            }
+            .nav-bar .navbar {
+                padding: 20px;
+            }
+            .nav-bar .navbar-brand {
+                display: none;
+            }
+            .nav-bar a.nav-link {
+                padding: 8px 15px;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            .nav-bar .navbar {
+                padding: 15px;
+            }
+            .nav-bar a.nav-link {
+                padding: 5px;
+            }
+            .nav-bar .dropdown-menu {
+                box-shadow: none;
+            }
+            .nav-bar .btn {
+                display: none;
+            }
+        }
+        /*******************************/
+        /********* Footer CSS **********/
+        /*******************************/
+        
+        .footer {
+            position: relative;
+            margin-top: 45px;
+            padding-top: 90px;
+            background: #030f27;
+            color: #ffffff;
+        }
+        
+        .footer .footer-contact,
+        .footer .footer-link,
+        .footer .newsletter {
+            position: relative;
+            margin-bottom: 45px;
+        }
+        
+        .footer h2 {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: skyblue;
+        }
+        
+        .footer h2::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: skyblue;
+        }
+        
+        .footer .footer-link a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffffff;
+            transition: .3s;
+        }
+        
+        .footer .footer-link a::before {
+            position: relative;
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        
+        .footer .footer-link a:hover {
+            color: skyblue;
+            letter-spacing: 1px;
+        }
+        
+        .footer .footer-contact p i {
+            width: 25px;
+        }
+        
+        .footer .footer-social {
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .footer .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            padding: 7px 0;
+            text-align: center;
+            border: 1px solid rgba(256, 256, 256, .3);
+            border-radius: 60px;
+            transition: .3s;
+        }
+        
+        .footer .footer-social a i {
+            font-size: 15px;
+            color: #ffffff;
+        }
+        
+        .footer .footer-social a:hover {
+            background: skyblue;
+            border-color: skyblue;
+        }
+        
+        .footer .footer-social a:hover i {
+            color: #030f27;
+        }
+        
+        .footer .newsletter .form {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .footer .newsletter input {
+            height: 50px;
+            border: 2px solid #121518;
+            border-radius: 0;
+        }
+        
+        .footer .newsletter .btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            height: 40px;
+            padding: 8px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: skyblue;
+            background: #121518;
+            border-radius: 0;
+            border: 2px solid skyblue;
+            transition: .3s;
+        }
+        
+        .footer .newsletter .btn:hover {
+            color: #121518;
+            background: skyblue;
+        }
+        
+        .footer .footer-menu .f-menu {
+            position: relative;
+            padding: 15px 0;
+            font-size: 0;
+            text-align: center;
+            border-top: 1px solid rgba(256, 256, 256, .1);
+            border-bottom: 1px solid rgba(256, 256, 256, .1);
+        }
+        
+        .footer .footer-menu .f-menu a {
+            color: #ffffff;
+            font-size: 16px;
+            margin-right: 15px;
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, .1);
+        }
+        
+        .footer .footer-menu .f-menu a:hover {
+            color: skyblue;
+        }
+        
+        .footer .footer-menu .f-menu a:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+        }
+        
+        .footer .copyright {
+            padding: 30px 15px;
+        }
+        
+        .footer .copyright p {
+            margin: 0;
+            color: #ffffff;
+        }
+        
+        .footer .copyright .col-md-6:last-child p {
+            text-align: right;
+        }
+        
+        .footer .copyright p a {
+            color: skyblue;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .footer .copyright p a:hover {
+            color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .footer .copyright p,
+            .footer .copyright .col-md-6:last-child p {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+        
+        .certificates-container {
+            position: absolute;
+            width: 100%;
+            background-color: hsl(0, 0%, 80%);
+            color: black;
+            padding: 5px;
+            height: 200px;
+            margin-bottom: 500px;
+        }
+        
+        .certificates-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 20%;
+        }
+        
+        .certificates-list {
+            display: flex;
+            overflow: hidden;
+            animation: scrollCertificates 10s linear infinite;
+        }
+        
+        .certificates-item {
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            background-color: hsl(0, 0%, 80%);
+            ;
+            border-radius: 5px;
+        }
+        
+        @keyframes scrollCertificates {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+         :root {
+            --min-color: #fff;
+            --sc-color: #3ec1d5;
+        }
+        
+        .portfolio .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+            gap: 1rem;
+            margin: 6rem auto;
+            width: 90%;
+        }
+        
+        .portfolio .row .box {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio .row .box:hover img {
+            transform: translateY(-100%);
+        }
+        
+        .portfolio .row .box img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .portfolio .row .box:hover .content {
+            transform: translateY(0);
+        }
+        
+        .portfolio .row .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 3rem 2rem;
+            height: 100%;
+            width: 100%;
+            transform: translateY(100%);
+            padding-top: 2.5rem;
+        }
+        
+        .portfolio .row .box .content h3 {
+            font-size: 2.5rem;
+            color: var(--sc-color);
+            margin-top: 4rem;
+        }
+        
+        .portfolio .row .box .content p {
+            padding: 1rem 0;
+            font-size: 1.8rem;
+            line-height: 1;
+            color: var(--min-color);
+            margin-bottom: 0;
+            color: var(--min-color);
+        }
+        
+        @media(max-width:550px) {
+            .portfolio .row {
+                grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+            }
+        }
+        
+        .heading {
+            margin: 5rem auto;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--th-color);
+        }
+        
+        .heading div {
+            display: inline-block;
+            border-bottom: 0.2rem solid var(--th-color);
+            width: 15rem;
+        }
+        
+        .heading div:hover {
+            width: 25rem;
+        }
+        
+        #service-section {
+            width: 100%;
+            height: auto;
+            padding: 70px 12%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .containerr {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 60px 40px;
+        }
+        
+        .card {
+            padding: 30px;
+            background-color: hsl(0, 0%, 70%);
+            ;
+            color: #fff;
+            border-radius: 3px;
+            border-top-right-radius: 50px;
+            position: relative;
+            transition: .7s;
+        }
+        
+        .card h2 {
+            font-size: 17px;
+            margin: 10px 0 15px 0;
+            transition: .7s;
+        }
+        
+        .card p {
+            font-size: 13px;
+            opacity: .8;
+        }
+        
+        .card .logoo {
+            width: 70px;
+            height: 50px;
+            background-color: #fff;
+            color: hsl(0, 0%, 70%);
+            border-radius: 3px;
+            display: grid;
+            place-items: center;
+            font-size: 23px;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            transform: translateY(-50%);
+            transition: .7s;
+        }
+        
+        .card:hover {
+            color: #333;
+            background-color: rgb(230, 230, 230);
+        }
+        
+        .card:hover .logoo {
+            color: #fff;
+            background-color: hsl(0, 0%, 70%);
+            ;
+        }
+        
+        .card:hover h2 {
+            color: hsl(0, 0%, 80%);
+        }
+        
+        .contact-bg {
+            height: 40vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(image/contact-bg.jpg);
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-bg h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        
+        .contact-bg h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            padding: 0.4rem 0;
+            letter-spacing: 4px;
+        }
+        
+        .line div {
+            margin: 0 0.2rem;
+        }
+        
+        .line div:nth-child(1),
+        .line div:nth-child(3) {
+            height: 3px;
+            width: 70px;
+            background: #030f27;
+            border-radius: 5px;
+        }
+        
+        .line {
+            display: flex;
+            align-items: center;
+        }
+        
+        .line div:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            background: #030f27;
+            border-radius: 50%;
+        }
+        
+        .text {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .contact-bg .text {
+            margin: 1.6rem 0;
+        }
+        
+        .contact-body {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .contact-info {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .contact-info span {
+            display: block;
+        }
+        
+        .contact-info div {
+            margin: 0.8rem 0;
+            padding: 1rem;
+        }
+        
+        .contact-info span .fas {
+            font-size: 2rem;
+            padding-bottom: 0.9rem;
+            color: #030f27;
+        }
+        
+        .contact-info div span:nth-child(2) {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info .text {
+            padding-top: 0.4rem;
+        }
+        
+        .contact-form {
+            padding: 2rem 0;
+            border-top: 1px solid #c7c7c7;
+        }
+        
+        .contact-form form {
+            padding-bottom: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            border: 1.5px solid #c7c7c7;
+            border-radius: 5px;
+            padding: 0.7rem;
+            margin: 0.6rem 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            outline: 0;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+        }
+        
+        .contact-form form div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 0.6rem;
+        }
+        
+        .send-btn {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #fff;
+            background: #030f27;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .send-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-form>div img {
+            width: 85%;
+        }
+        
+        .contact-form>div {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-footer {
+            padding: 2rem 0;
+            background: #000;
+        }
+        
+        .contact-footer h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.4rem;
+            transition: all 0.4s ease;
+        }
+        
+        .social-links a:hover {
+            color: #030f27;
+            border-color: #030f27;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .contact-bg .text {
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .contact-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .contact-bg .text {
+                width: 50%;
+            }
+            .contact-form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+            }
+        }
+        
+        @media screen and (min-width: 1200px) {
+            .contact-info {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .section-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-text:hover {
+            transform: scale(1.1);
+        }
+        /* CSS pour les phrases "conception de site web" et "gestionnaires médias sociaux" */
+        
+        .highlighted-text {
+            color: skyblue;
+            /* Couleur différente */
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+        
+        .highlighted-text:hover {
+            color: black;
+            /* Couleur différente au survol */
+            font-size: 20px;
+            /* Taille de police différente au survol */
+        }
+        /* Définition de l'animation de zoom */
+        
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        /* Styles pour le conteneur du contenu */
+        
+        .content {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+            line-height: 1.75;
+        }
+        /* Styles pour l'image avec animation de zoom au survol */
+        
+        .content img {
+            margin-top: 50px;
+            max-width: 40%;
+            height: auto;
+            width: 1000vh;
+            /* Nouvelle largeur de l'image */
+            margin-right: 20px;
+            float: left;
+            transition: transform 0.3s ease;
+            border: 2px solid #333;
+            /* Couleur et largeur de la bordure */
+            border-radius: 8px;
+            /* Coins arrondis de la bordure */
+            padding: 4px;
+            /* Espace entre l'image et la bordure */
+        }
+        
+        .content img:hover {
+            transform: scale(1.1);
+            /* Appliquer l'effet de zoom au survol */
+        }
+        /* Styles pour le texte */
+        
+        .content p {
+            overflow: hidden;
+            color: rgb(0, 0, 0);
+        }</style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="logo">
+                            <a href="index.html">
+                                <h1 style="color:  #000080;  font-size: 30px;"><img src="img/WhatsApp Image 2023-09-08 at 19.30.16.jpeg" alt="Logo ArtiWeb" style="width: 250px; height: 100px;" class="arti"></h1>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-calendar"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Opening Hour</h3>
+                                        <p>Mon - Fri, 9:00 - 23:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Call Us</h3>
+                                        <p>+0532-432066</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-send-mail"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Email Us</h3>
+                                        <p>Contact@artiweb.ma</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="https://artiweb.ma/nos-services/" class="nav-item nav-link">Service</a>
+                            
+                            <a href="" class="nav-item nav-link">Application </a>
+                            <a href="" class="nav-item nav-link">Project</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nos offres</a>
+                                <div class="dropdown-menu">
+                                    <a href="https://artiweb.ma/demandez-un-devis" class="dropdown-item">Devis</a>
+                                    <a href="https://artiweb.ma/forfait/" class="dropdown-item">Forfait</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="ml-auto">
+                            <!-- <a class="btn" href="">Evaluation gratuite</a> -->
+                            <a class="btn btn-primary" href="#" id="evaluationBtn" data-toggle="modal" data-target="#evaluationModal" >Evaluation gratuite</a>
+
+                             <!-- Boîte de dialogue modale -->
+                             <div class="modal fade" id="evaluationModal" tabindex="-1" role="dialog" aria-labelledby="evaluationModalLabel"
+                             aria-hidden="true">
+                             <div class="modal-dialog modal-dialog-centered" role="document">
+                               <div class="modal-content">
+                                 <div class="modal-header">
+                                   <h5 class="modal-title" id="evaluationModalLabel">Entrez vos informations</h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                   </button>
+                                 </div>
+                                 <div class="modal-body">
+                                   <form action="ser.php" method="post">
+                                     <div class="form-group">
+                                       <label for="inputNom">Nom et Prénom *</label>
+                                       <input type="text" class="form-control" id="inputNom" placeholder="Entrez votre nom" required>
+                                     </div>
+                                     <div class="form-group">
+                                       <label for="inputTelephoneOrMail">Email *</label>
+                                       <input type="text" class="form-control" id="inputTelephoneOrMail"
+                                         placeholder="Entrez votre numéro de téléphone ou adresse e-mail" required>
+                                     </div>
+                                     <div class="form-group">
+                                       <label for="inputOptionsServices">Téléphone *</label>
+                                       <input type="text" class="form-control" id="inputOptionsServices"
+                                         placeholder="Entrez votre Téléphone" required>
+                                     </div>
+                                     <div class="form-group">
+                                       <label for="inputCourriel">Société</label>
+                                       <input type="email" class="form-control" id="inputCourriel" placeholder="Entrez votre Société">
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="selectSecteurActivite">Sélectionnez votre secteur d'activité</label>
+                                         <select class="form-control" id="selectSecteurActivite">
+                                             <option value="architecture">Architecture</option>
+                                             <option value="service">Service</option>
+                                             <option value="industries">Industries</option>
+                                             <option value="enseignement">Enseignement</option>
+                                              <option value="sante">Santé</option>
+                                             <!-- Ajoutez autant d'options que nécessaire -->
+                                         </select>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="selectService">Sélectionnez un service</label>
+                                         <select class="form-control" id="selectService">
+                                             <option value="strategieDigitale">Stratégie Digitale</option>
+                                             <option value="creationContenus">Création De Contenus</option>
+                                             <option value="seo">SEO</option>
+                                             <option value="socialAds">Social ADS</option>
+                                             <option value="seaDisplay">SEA et Display</option>
+                                             <option value="seaDisplay"> Display</option>
+                                             <!-- Ajoutez autant d'options que nécessaire -->
+                                         </select>
+                                     </div>
+                                     
+                                     
+                                   </form>
+                                 </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                   <button type="button" class="btn btn-primary" onclick="envoyerInformations()">Envoyer</button>
+                                 </div>
+                               </div>
+                             </div>
+                             
+                           </div>
+                           <!-- Placez ce script JavaScript dans votre page HTML ou dans un fichier externe -->
+<script>
+ function envoyerInformations() {
+     var nom = document.getElementById("inputNom").value;
+     var telephoneOrMail = document.getElementById("inputTelephoneOrMail").value;
+     var optionsServices = document.getElementById("inputOptionsServices").value;
+     var courriel = document.getElementById("inputCourriel").value;
+     var urlSiteWeb = document.getElementById("inputUrlSiteWeb").value;
+ 
+     var xhr = new XMLHttpRequest();
+     xhr.open("POST", "ser.php", true);
+     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xhr.onreadystatechange = function() {
+         if (xhr.readyState == 4 && xhr.status == 200) {
+             // Afficher la réponse de PHP (par exemple, le message de succès)
+             console.log(xhr.responseText);
+             alert("Votre message a été envoyé avec succès.");
+         }
+     };
+ 
+     var data = "nom=" + encodeURIComponent(nom) +
+                "&telephoneOrMail=" + encodeURIComponent(telephoneOrMail) +
+                "&optionsServices=" + encodeURIComponent(optionsServices) +
+                "&courriel=" + encodeURIComponent(courriel) +
+                "&urlSiteWeb=" + encodeURIComponent(urlSiteWeb);
+ 
+     xhr.send(data);
+ }
+ </script>
+ 
+                          
+                           <!-- Votre formulaire HTML comme précédemment -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+
+
+
+        <div class="content">
+            <img src="about.png" alt="Image à côté du texte">
+            <h2>À propos de nous</h2>
+            <p>Nos experts chevronnés sont dédiés à vous apporter des idées brillantes, créatives et innovantes pour mieux véhiculer vos messages et valeurs, ainsi qu’interagir efficacement avec vos clients cibles. Que vous souhaitiez accroître votre présence
+                en ligne, améliorer votre stratégie de marketing numérique ou concevoir une campagne publicitaire percutante, nous sommes là pour vous aider.</p>
+            <p>Nous comprenons l’importance de comprendre votre entreprise, vos objectifs et vos valeurs. C’est pourquoi nous offrons un échange gratuit et sans engagement avec l’un de nos experts. Nous serons ravis d’écouter attentivement vos besoins spécifiques
+                et de vous conseiller sur les meilleures stratégies de communication et de marketing digital adaptées à votre secteur d’activité.</p>
+            <p>Que vous soyez une petite entreprise ou une grande marque, nous mettons tout en œuvre pour vous aider à atteindre vos objectifs et à maximiser votre visibilité en ligne. Nous proposons une gamme complète de services, allant de la conception
+                de sites web conviviaux et esthétiquement agréables, à la gestion de campagnes publicitaires en ligne percutantes sur les réseaux sociaux.</p>
+            <p>ArtiWeb se distingue par son approche personnalisée et son engagement envers la satisfaction du client. Notre équipe passionnée mettra tout en œuvre pour vous offrir des résultats exceptionnels et un retour sur investissement optimal.</p>
+            <p>Faites confiance à ArtiWeb pour être votre partenaire de confiance en matière de communication et de marketing digital à Fès. Contactez-nous dès maintenant pour bénéficier d’un échange offert avec l’un de nos experts et découvrir comment nous
+                pouvons vous aider à propulser votre entreprise vers de nouveaux sommets.</p>
+        </div>
+
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h2>Office Contact</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>22Q2+62, Ave Mohammed es Slaoui, Fes 30050</p>
+                            <p><i class="fa fa-phone-alt"></i>+0532-432066</p>
+                            <p><i class="fa fa-envelope"></i>Contact@artiweb.ma</p>
+                            <div class="footer-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/Artiwebmaroc?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/company/arti-web/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/artiweb.ma/?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send/?phone=%2B212664017447&text&type=phone_number&app_absent=0" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Services Areas</h2>
+                            <a href="">SEO</a>
+                            <a href="">SEA</a>
+                            <a href="">Social ADS</a>
+                            <a href="">Creation De Contenus​</a>
+                            <a href="">Génération De Leads</a>
+                            <a href="">Stratégie Digitale</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Useful Pages</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Our Team</a>
+                            <a href="">Projects</a>
+                            <a href="">Testimonial</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Discover the latest updates, trends, and advice in the realm of communication and digital marketing by subscribing to our newsletter.
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email here">
+                                <button class="btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-menu">
+                <div class="f-menu">
+                    <a href="">Terms of use</a>
+                    <a href="">Privacy policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">Help</a>
+                    <a href="">FQAs</a>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="">ArtiWeb</a>, All Right Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

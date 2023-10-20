@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-down Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#" onmouseover="showOverlay('chat.html')" onmouseout="hideOverlay()">Service 1</a></li>
+        <li><a href="#" onmouseover="showOverlay('service.html')" onmouseout="hideOverlay()">Service 2</a></li>
+        <!-- Ajoutez d'autres liens de service ici -->
+    </ul>
+
+    <div class="overlay" id="overlay" onmouseover="showContent()" onmouseout="hideContent()">
+        <div class="overlay-content">
+            <iframe id="serviceFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Contenu principal de la page -->
+        <h1>Contenu Principal</h1>
+        <p>Ceci est le contenu principal de la page.</p>
+
+        <!-- Informations sur l'employé (à supprimer ou remplacer par vos données) -->
+        <div>
+            <h2>Informations sur l'employé</h2>
+            <p><strong>Nom :</strong> <span id="employeeName"></span></p>
+            <p><strong>Année de début :</strong> <span id="employeeStartingYear"></span></p>
+            <p><strong>Total des présences :</strong> <span id="employeeTotalAttendance"></span></p>
+            <p><strong>Années d'ancienneté :</strong> <span id="employeeYear"></span></p>
+            <p><strong>Dernière heure de présence :</strong> <span id="employeeLastAttendanceTime"></span></p>
+            <p><strong>Connecté en retard :</strong> <span id="employeeConnectedLate"></span></p>
+        </div>
+    </div>
+
+
+    <script>
+        let timeoutId;
+
+        function showOverlay(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const serviceFrame = document.getElementById('serviceFrame');
+            serviceFrame.src = pageURL;
+            overlay.style.display = 'block';
+        }
+
+        function hideOverlay() {
+            const overlay = document.getElementById('overlay');
+            timeoutId = setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 1000); // Délai en millisecondes (3 secondes)
+        }
+
+        // Fonction pour afficher le contenu lors du survol
+        function showContent() {
+            const overlay = document.getElementById('overlay');
+            clearTimeout(timeoutId); // Effacer le délai s'il existe
+            overlay.style.display = 'block';
+        }
+
+        // Fonction pour masquer le contenu lorsque le curseur quitte l'overlay
+        function hideContent() {
+            const overlay = document.getElementById('overlay');
+            timeoutId = setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 50); // Délai en millisecondes (3 secondes)
+        }
+    </script>
+
+</body>
+
+</html>

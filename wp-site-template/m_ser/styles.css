@@ -1,0 +1,343 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    /* Le menu occupe toute la hauteur de la page */
+    /* Espacement égal entre les divs */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Centre les boutons horizontalement */
+}
+
+.btn-voir-plus,
+.btn-demander-devis {
+    flex-grow: 1;
+    /* Les boutons occupent l'espace nécessaire */
+    margin: 0 5px;
+    /* Espacement entre les boutons */
+    text-align: center;
+    /* Centre le contenu du bouton */
+}
+
+.btn-voir-plus {
+    background-color: #3182c5;
+    /* Couleur bleu plus foncé */
+    color: #fff;
+    /* Couleur du texte en blanc */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Supprime le soulignement du lien */
+    transition: background-color 0.3s;
+    /* Ajoute une transition pour l'animation */
+}
+
+.btn-voir-plus:hover {
+    background-color: #1e5ea8;
+    /* Couleur bleu plus foncé au survol */
+}
+
+.btn-demander-devis {
+    background-color: #a1d2ff;
+    /* Couleur bleu plus clair */
+    color: #000;
+    /* Couleur du texte en noir */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Supprime le soulignement du lien */
+    transition: background-color 0.3s;
+    /* Ajoute une transition pour l'animation */
+}
+
+.btn-demander-devis:hover {
+    background-color: #7fb0f9;
+    /* Couleur bleu plus clair au survol */
+}
+
+.strategy {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ajouter cette ligne pour que les éléments passent à la ligne si besoin */
+}
+
+.strategy-item {
+    text-align: center;
+    flex: 1 1 200px;
+    /* Ajouter flex-basis pour définir la taille minimale des éléments */
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-icon {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Modifier la largeur à 100% */
+}
+
+.strategy-icon img {
+    max-width: 100%;
+    max-height: 100px;
+    /* Limite de hauteur souhaitée */
+    width: 100px;
+    /* Utiliser 'auto' pour conserver le ratio d'origine de l'image */
+    height: 200px;
+    /* Utiliser 'auto' pour conserver le ratio d'origine de l'image */
+}
+
+.box {
+    text-align: center;
+    /* Pour occuper le même espace */
+    background-color: #a1d2ff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2vh;
+}
+
+.menu {
+    /* background-color: #effaff;
+    /* Couleur blanc cassé pour le menu */
+    /* padding: 10px;
+    display: flex;
+    flex-direction: column;
+    Les éléments du menu sont disposés en colonne */
+    /* Définir la largeur fixe du menu */
+    background-color: #030f27;
+    /* Couleur blanc cassé pour le menu */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    /* Trait de séparation entre les éléments du menu */
+    margin-bottom: 10vh;
+    /* Espace vertical entre les éléments du menu */
+    transition: background-color 0.3s;
+    /* Ajoutez une transition pour l'animation */
+}
+
+.menu li:last-child {
+    margin-bottom: 0;
+    /* Supprimer l'espace sous le dernier élément */
+}
+
+.content {
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /* Centrer le contenu horizontalement */
+    align-items: center;
+    /* Centrer le contenu verticalement */
+    flex-grow: 1;
+    /* Permet au contenu de remplir tout l'espace disponible */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Ajouter une ombre légère au contenu */
+    width: 20vh;
+}
+
+.ap {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #030f27;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    /* Centrer le contenu horizontalement et verticalement */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex: 50%;
+}
+
+.content div:first-child {
+    display: block;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    /* Couleur blanche pour la décoration */
+}
+
+.menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    /* Couleur blanche pour la décoration */
+    transition: width 0.3s;
+    /* Ajouter une transition pour l'animation */
+}
+
+.menu li i {
+    margin-right: 8px;
+    /* Espacement entre l'icône et le texte */
+}
+
+.menu li:hover {
+    background-color: skyblue;
+    /* Couleur bleu plus foncé au survol */
+    border-radius: 8px;
+    /* Arrondir les coins du cadre */
+}
+
+.menu li:hover i {
+    color: #fff;
+    /* Changer la couleur de l'icône au survol */
+}
+
+
+/* ... Vos styles CSS précédents ... */
+
+.menu li.active {
+    background-color: skyblue;
+    /* Couleur bleu plus foncé pour l'élément actif */
+    padding-left: 15px;
+    /* Décaler le texte pour l'élément actif */
+    border-radius: 8px;
+    /* Arrondir les coins du cadre pour l'élément actif */
+}
+
+.menu li.active i {
+    color: #fff;
+    /* Changer la couleur de l'icône pour l'élément actif */
+}
+
+h2 {
+    color: #05183d;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    /* Choisissez une belle police ici */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Ombre portée (horizontal, vertical, flou, couleur) */
+    font-size: 40px;
+}
+
+.bullet-list {
+    list-style-type: disc;
+    /* Utiliser des points ronds pour les puces */
+    padding-left: 20px;
+    /* Ajouter un espacement entre le bord gauche et le texte de la liste */
+}
+
+.bullet-list {
+    list-style-type: disc;
+    /* Utiliser des points ronds pour les puces */
+    padding-left: 20px;
+    /* Ajouter un espacement entre le bord gauche et le texte de la liste */
+}
+
+.our-approach {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p {
+    text-indent: 20px;
+}
+
+h3 {
+    padding-left: 15px;
+    font-size: 24px;
+    /* Taille de la police */
+    font-weight: bold;
+    /* Gras */
+    color: #333;
+    /* Couleur du texte */
+    margin-top: 20px;
+    /* Marge en haut */
+    margin-bottom: 10px;
+    /* Marge en bas */
+}
+
+.contentt {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentt div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.contentt img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.contentt p {
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    flex: 1;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    /* Inverser l'ordre des éléments */
+}
+
+p {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 25px;
+}
