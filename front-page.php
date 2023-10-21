@@ -25,8 +25,8 @@
                                             <i class="flaticon-calendar"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 9:00 - 23:00</p>
+                                            <h3>Téléphone</h3>
+                                            <p>Lundi - Vendredi (9:00 - 21:00)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -36,8 +36,8 @@
                                             <i class="flaticon-call"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>+0532-432066</p>
+                                            <h3>Téléphone</h3>
+                                            <p>(+212)532-432066</p>
                                         </div>
                                     </div>
                                 </div>
@@ -47,8 +47,8 @@
                                             <i class="flaticon-send-mail"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>Contact@artiweb.ma</p>
+                                            <h3>Adresse e-mail</h3>
+                                            <p>contact@artiweb.ma</p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,57 +70,26 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto">
-                                <a href="" class="nav-item nav-link active">Home</a>
-                                <a href="nous.html" class="nav-item nav-link">About</a>
+                                <a href="<?= get_site_url(); ?>" class="nav-item nav-link active">Accueil</a>
+                                <a href="a-propos-artiweb-agence-de-communication/" class="nav-item nav-link">À propos</a>
                                 <!-- <a href="" class="nav-item nav-link">Service</a> -->
-                                <a href="" class="nav-item nav-link" onmouseover="showOverlay('m_ser/chat.html')" onmouseout="hideOverlay()">Service</a>
-                                <script>
-                                    let timeoutId;
-                            
-                                    function showOverlay(pageURL) {
-                                        const overlay = document.getElementById('overlay');
-                                        const serviceFrame = document.getElementById('serviceFrame');
-                                        serviceFrame.src = pageURL;
-                                        overlay.style.display = 'block';
-                                        serviceFrame.style.width = '100%';
-                                        serviceFrame.style.height = '100%';
-                                    }
-                            
-                                    function hideOverlay() {
-                                        const overlay = document.getElementById('overlay');
-                                        timeoutId = setTimeout(function() {
-                                            overlay.style.display = 'none';
-                                        }, 1000); // Délai en millisecondes (3 secondes)
-                                    }
-                            
-                                    // Fonction pour afficher le contenu lors du survol
-                                    function showContent() {
-                                        const overlay = document.getElementById('overlay');
-                                        clearTimeout(timeoutId); // Effacer le délai s'il existe
-                                        overlay.style.display = 'block';
-                                    }
-                            
-                                    // Fonction pour masquer le contenu lorsque le curseur quitte l'overlay
-                                    function hideContent() {
-                                        const overlay = document.getElementById('overlay');
-                                        timeoutId = setTimeout(function() {
-                                            overlay.style.display = 'none';
-                                        }, 50); // Délai en millisecondes (3 secondes)
-                                    }
-                                </script>
-                                <a href="#applicationsSection" class="nav-item nav-link">Application </a>
-                                <a href="#projects" class="nav-item nav-link">Project</a>
+                                <a href="<?= get_site_url(); ?>/nos-services/" class="nav-item nav-link">Nos services</a>
+                               
+                                <!-- <a href="#applicationsSection" class="nav-item nav-link">Application</a> -->
+                                <a href="applications/" class="nav-item nav-link">Application</a>
+                                <a href="<?= get_site_url(); ?>/#projects" class="nav-item nav-link">Projects</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nos offres</a>
                                     <div class="dropdown-menu">
-                                        <a href="https://artiweb.ma/demandez-un-devis/" class="dropdown-item">Devis</a>
-                                        <a href="https://artiweb.ma/forfait/" class="dropdown-item">Forfait</a>
+                                        <a href="demandez-un-devis/" class="dropdown-item">Devis</a>
+                                        <a href="forfait/" class="dropdown-item">Forfait</a>
                                     </div> 
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="contactez-nous/" class="nav-item nav-link">Contact</a>
                             </div>
                             <div class="ml-auto">
-                                <a class="btn btn-primary" href="#" id="evaluationBtn" data-toggle="modal" data-target="#evaluationModal" >Evaluation gratuite</a>
+                                    <!-- id="evaluationBtn" data-toggle="modal" data-target="#evaluationModal" -->
+                                <a class="btn btn-primary" href="<?= get_site_url(); ?>/contactez-nous/">Evaluation gratuite</a>
 
                                 <!-- Boîte de dialogue modale -->
                                 <div class="modal fade" id="evaluationModal" tabindex="-1" role="dialog" aria-labelledby="evaluationModalLabel"
@@ -246,7 +215,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">Une agence web de confiance</p>
                             <h1 class="animated fadeInLeft">pour le développement de votre site web</h1>
-                            <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a>
+                            <!-- <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a> -->
 
                         </div>
                     </div>
@@ -256,7 +225,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">Experts dans la création  </p>
                             <h1 class="animated fadeInLeft">de sites web pour votre entreprise</h1>
-                            <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a>
+                            <!-- <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a> -->
 
                         </div>
                     </div>
@@ -266,7 +235,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">Nous réalisons vos</p>
                             <h1 class="animated fadeInLeft"> projets web avec professionnalisme</h1>
-                            <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a>
+                            <!-- <a class="btn animated fadeInUp" href="#" data-toggle="modal" data-target="#evaluationModal">Here we go</a> -->
 
                         </div>
                     </div>
@@ -294,7 +263,7 @@
                 <div class="certificates-wrapper">
         
                     <div class="certificates" id="certificateContainer">
-                        <img src="<?= get_stylesheet_directory_uri() . "/assets/" ?>img/cer1.png" alt="Certificat 1">
+                        <!-- <img src="/assets/"  alt="Certificat 1"> -->
                         <img src="<?= get_stylesheet_directory_uri() . "/assets/" ?>img/cerrr2.jpg" alt="Certificat 2">
                         <img src="<?= get_stylesheet_directory_uri() . "/assets/" ?>img/cerrr3.jpg" alt="Certificat 3">
                         <img src="<?= get_stylesheet_directory_uri() . "/assets/" ?>img/cerrr4.jpg" alt="Certificat 4">
@@ -344,7 +313,7 @@
                         </div>
                         <div class="col-lg-7 col-md-6">
                             <div class="section-header text-left">
-                                <p>Welcome to ArtiWeb</p>
+                                <p>Bienvenue sur ArtiWeb</p>
                                 <h2>À propos de nous</h2>
                             </div>
                             <div class="about-text">
@@ -354,7 +323,7 @@
                                 <p>
                                     le métier de nos experts consiste à vous apporter des idées brillantes, créatives et innovantes pour mieux véhiculer vos messages, valeurs et interagir efficacement avec vos clients cibles. Bénéficiez d’un échange offert et sans engagement avec un de nos experts.
                                 </p>
-                                <a class="btn" href="https://artiweb.ma/a-propos-artiweb-agence-de-communication/">Learn More</a>
+                                <a class="btn" href="<?= get_site_url(); ?>/a-propos-artiweb-agence-de-communication/">En savoir plus</a>
                             </div>
                         </div>
                     </div>
@@ -374,8 +343,8 @@
                                         <i class="flaticon-worker"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">109</h2>
-                                        <p>Expert Workers</p>
+                                        <h2 data-toggle="counter-up">15</h2>
+                                        <p>Travailleurs Experts</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -383,8 +352,8 @@
                                         <i class="flaticon-building"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">485</h2>
-                                        <p>Happy Clients</p>
+                                        <h2 data-toggle="counter-up">154</h2>
+                                        <p>Clients Satisfaits</p>
                                     </div>
                                 </div>
                             </div>
@@ -396,8 +365,8 @@
                                         <i class="flaticon-address"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">789</h2>
-                                        <p>Completed Projects</p>
+                                        <h2 data-toggle="counter-up">102</h2>
+                                        <p>Projets Achevés</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -405,8 +374,8 @@
                                         <i class="flaticon-crane"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">890</h2>
-                                        <p>Running Projects</p>
+                                        <h2 data-toggle="counter-up">105</h2>
+                                        <p>Projets En Cours</p>
                                     </div>
                                 </div>
                             </div>
@@ -419,8 +388,7 @@
         <!-- service part -->
          <section id="service-section" class="scroll-reveal fade-up">
             <div class="service-head">
-               <h2>What I <span>Offer</span></h2>
-              <h2><div class="text-3">Here is my Services <span class="typingg"></span></div></h2>
+               <h2>Ce que nous <span>offrons</span></h2> 
               <script>
                 var typed = new Typed(".typingg", {
                     strings: ["SEO", "SEA", "Social ADS", "Création de Contenu","Stradégie degital"],
@@ -432,7 +400,7 @@
                
            </div><br>
            <div class="tixt"><h2 ><p class="section-text">
-            À la recherche d’experts en<span class="highlighted-text">conception de site web</span>,
+            À la recherche d’experts <span class="highlighted-text">enconception de site web</span>,
             d’une agence Google Ads ou de
             <span class="highlighted-text">gestionnaires médias sociaux</span> 
     
@@ -459,7 +427,7 @@
                         <script>
                             const button = document.getElementById("showModalButton");
                             button.addEventListener("click", function() {
-                                window.location.href = "https://artiweb.ma/agence-generation-de-leads-fes/";
+                                window.location.href = "<?= get_site_url(); ?>/agence-generation-de-leads-fes/";
                             });
                         </script>
                       </div>
@@ -479,7 +447,7 @@
                       <script>
                        const button2 = document.getElementById("showModalButton2");
                        button2.addEventListener("click", function() {
-                     window.location.href = "https://artiweb.ma/strategie-digitale/";
+                     window.location.href = "<?= get_site_url(); ?>/strategie-digitale/";
                         });
                       </script>
                       </div>
@@ -498,7 +466,7 @@
                       <script>
                        const button3 = document.getElementById("showModalButton2");
                        button3.addEventListener("click", function() {
-                     window.location.href = "https://artiweb.ma/creation-de-contenus/";
+                     window.location.href = "<?= get_site_url(); ?>/creation-de-contenus/";
                         });
                       </script>
                     </div>
@@ -517,7 +485,7 @@
                       <script>
                        const button4 = document.getElementById("showModalButton4");
                        button4.addEventListener("click", function() {
-                     window.location.href = "https://artiweb.ma/sea/";
+                     window.location.href = "<?= get_site_url(); ?>/sea/";
                         });
                       </script>
                     </div>
@@ -536,7 +504,7 @@
                       <script>
                        const button5 = document.getElementById("showModalButton5");
                        button5.addEventListener("click", function() {
-                     window.location.href = "https://artiweb.ma/seo/";
+                     window.location.href = "<?= get_site_url(); ?>/seo/";
                         });
                       </script>
                     </div>
@@ -555,12 +523,15 @@
                       <script>
                        const button6 = document.getElementById("showModalButton6");
                        button6.addEventListener("click", function() {
-                     window.location.href = "https://artiweb.ma/social-ads/";
+                     window.location.href = "<?= get_site_url(); ?>/social-ads/";
                         });
                       </script>
                     </div>
                   </div>
-          </section>
+         
+         
+         
+                </section>
          <!-- service of video  -->
          <div class="containeer">
             <div class="titlle-container">
@@ -721,7 +692,7 @@ window.addEventListener('resize', stopVideoScrolling);
                                 <p>
                                     Grâce à une interface conviviale, vous pourrez visualiser l'état de votre stock d'un simple coup d'œil, générer des rapports détaillés sur les mouvements de produits et minimiser les risques de ruptures ou de surstocks. Simplifiez la gestion logistique de votre entreprise, réduisez les coûts opérationnels et améliorez l'efficacité de votre chaîne d'approvisionnement grâce à notre logiciel de gestion de stock avancé.
                                 </p>
-                                <a class="btn" href="https://artiweb.ma/demandez-un-devis/" style="background-color: rgb(94, 129, 243);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
+                                <a class="btn" href="<?= get_site_url(); ?>/demandez-un-devis/" style="background-color: rgb(94, 129, 243);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
                             </div>
                         </div>
                     </div>
@@ -750,7 +721,7 @@ window.addEventListener('resize', stopVideoScrolling);
                                 <p>
                                   Grâce à une interface conviviale, vous pourrez suivre en temps réel les performances de chaque élève, générer des rapports détaillés et faciliter la collaboration entre les enseignants, les élèves et les parents. Gagnez en efficacité administrative, réduisez les tâches manuelles et consacrez plus de temps à l'éducation. Simplifiez la gestion de votre école avec notre logiciel intuitif et performant.
                                 </p>
-                                <a class="btn" href="https://artiweb.ma/demandez-un-devis/" style="background-color:  rgb(243, 199, 141);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
+                                <a class="btn" href="<?= get_site_url(); ?>/demandez-un-devis/" style="background-color:  rgb(243, 199, 141);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
                             </div>
                         </div>
                     </div>
@@ -781,7 +752,7 @@ window.addEventListener('resize', stopVideoScrolling);
                                  Souhaiteriez-vous expérimenter Arti PHARMA en ligne ? L'essai est gratuit en passant par notre site web.
 
                             </p>
-                            <a class="btn" href="https://artiweb.ma/demandez-un-devis/" style="background-color: rgb(86, 158, 102);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
+                            <a class="btn" href="<?= get_site_url(); ?>/demandez-un-devis/" style="background-color: rgb(86, 158, 102);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
                         </div>
                     </div>
                 </div>
@@ -809,7 +780,7 @@ window.addEventListener('resize', stopVideoScrolling);
                             <p>
                                 Doté de nombreuses fonctionnalités, cet outil est accessible à tous et facilite l'activité hôtelière au quotidien. Il comporte les fonctions clés indispensables au management des établissements hôteliers : gestion de l'accueil, gestion des réservations, allotments, chambres, points de vente, stock .... Découvrez notre logiciel de gestion ARTI Hôtels Manager, l'outil idéal pour optimiser votre activité. Accédez à votre hôtel partout où vous êtes. Notre panneau web vous permet d'être toujours mis à jour des derniers changements.
                             </p>
-                            <a class="btn" href="https://artiweb.ma/demandez-un-devis/" style="background-color: rgb(73, 112, 73);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
+                            <a class="btn" href="<?= get_site_url(); ?>/demandez-un-devis/" style="background-color: rgb(73, 112, 73);" target="_blank">DEMANDEZ VOTRE DEVIS</a>
                         </div>
                     </div>
                 </div>
@@ -827,7 +798,7 @@ window.addEventListener('resize', stopVideoScrolling);
             <div class="service">
                 <div class="container">
                     <div class="section-header text-center" id="projects">
-                        <p>Our Projects</p>
+                        <p>Nos projets</p>
                         <h2>Notre Portefeuille de Projets</h2>
                     </div>
                     <div class="row">
@@ -948,7 +919,7 @@ window.addEventListener('resize', stopVideoScrolling);
         
             <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="margin-top: -400px;">
+                    <div class="modal-content" style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -60%);">
                         <div class="modal-body">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -1162,44 +1133,48 @@ window.addEventListener('resize', stopVideoScrolling);
             
 
 
-            <section class = "contact-section">
-                <div class = "contact-bg">
+            <section class="contact-section">
+                <!-- <div class="contact-bg">
                   <h3>Get in Touch with Us</h3>
-                  <h2>contact us</h2>
+                  <h2>CONTACTEZ-NOUS</h2>
                   <div class = "line">
                     <div></div>
                     <div></div>
                     <div></div>
                   </div>
-                  <p class = "text">Si vous avez des questions ou si vous souhaitez en savoir davantage sur nos services, n'hésitez pas à nous contacter. Notre équipe passionnée chez ArtiWeb, une Agence de Communication et Marketing Digital basée à Fès, est là pour répondre à toutes vos interrogations. Nous sommes déterminés à vous aider à atteindre vos objectifs en créant des supports de communications sur mesure, adaptés à vos besoins de visibilité..</p>
-                </div>
+                  <p class="text mx-3">Si vous avez des questions ou si vous souhaitez en savoir davantage sur nos services, n'hésitez pas à nous contacter. 
+                                    Notre équipe passionnée chez ArtiWeb, une Agence de Communication et Marketing Digital 
+                                    basée à Fès, est là pour répondre à toutes vos interrogations. Nous sommes déterminés à vous aider à 
+                                    atteindre vos objectifs en créant des supports de communications sur mesure, adaptés à vos besoins de visibilité..
+                  </p>
+                </div> -->
           
           
                 <div class = "contact-body">
                   <div class = "contact-info">
                     <div>
                       <span><i class = "fas fa-mobile-alt"></i></span>
-                      <span>Phone No.</span>
-                      <span class = "text">+0532-432066</span>
+                      <span>Téléphone</span>
+                      <span class = "text">(+212)532-432066</span>
                     </div>
                     <div>
                       <span><i class = "fas fa-envelope-open"></i></span>
                       <span>E-mail</span>
-                      <span class = "text">Contact@artiweb.ma</span>
+                      <span class = "text">contact@artiweb.ma</span>
                     </div>
                     <div>
                       <span><i class = "fas fa-map-marker-alt"></i></span>
-                      <span>Address</span>
+                      <span>Adresse</span>
                       <span class = "text">22Q2+62, Ave Mohammed es Slaoui, Fes 30050</span>
                     </div>
                     <div>
                       <span><i class = "fas fa-clock"></i></span>
-                      <span>Opening Hours</span>
-                      <span class = "text">Monday - Friday ( 9:00 - 21:00)</span>
+                      <span>Horaires d'ouvertures</span>
+                      <span class = "text">Lundi - Vendredi (9:00 - 21:00)</span>
                     </div>
                   </div>
           
-                  <div class = "contact-form">
+                  <!-- <div class = "contact-form">
                     <form>
                       <div>
                         <input type="text" class="form-control" placeholder="Prénom">
@@ -1216,7 +1191,9 @@ window.addEventListener('resize', stopVideoScrolling);
                     <div>
                       <img src = "<?= get_stylesheet_directory_uri() . "/assets/" ?>img/contact.gif" alt = "">
                     </div>
-                  </div>
+                  </div> -->
+
+
                 </div>
           
                 <div class = "map">
@@ -1224,7 +1201,7 @@ window.addEventListener('resize', stopVideoScrolling);
                 </div>
           
                 <div class = "contact-footer">
-                  <h3>Follow Us</h3>
+                  <h3>Suivez-nous sur les réseaux sociaux</h3>
                   <div class = "social-links">
                     <a href = "https://www.facebook.com/Artiwebmaroc?mibextid=ZbWKwL" class = "fab fa-facebook-f" target="_blank"></a>
                     <a href = "#" class = "fab fa-twitter" target="_blank"></a>
@@ -1237,7 +1214,7 @@ window.addEventListener('resize', stopVideoScrolling);
           
 
             <!-- Testimonial Start -->
-            <div class="testimonial wow fadeIn" data-wow-delay="0.1s">
+            <div class="testimonial wow fadeIn" data-wow-delay="0.1s" style="margin: 0;">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -1328,155 +1305,7 @@ window.addEventListener('resize', stopVideoScrolling);
             </div>
             <!-- Testimonial End -->
 
-             <!-- team partie -->
-             <div class="containerrrr">
-                <div class="board">
-                    <h2 class="text-light">Word form our customers</h2>
-                    <p class="text-light">Some of the fullfilled costomers reviews</p>
-        
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    L'agence de marketing digital Artiweb se distingue par son expertise pointue, son approche stratégique et sa capacité à générer des résultats tangibles, faisant d'elle le partenaire idéal pour propulser votre entreprise vers de nouveaux sommets en ligne
-                                </div>
-                                <div class="profile">
-                                    <!-- <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt=""> -->
-                                    <div class="avatar">
-                                        m <!-- Remplacez cette lettre par l'initiale du nom de la personne -->
-                                    </div>
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-                                            // Récupère la première lettre du nom (remplacez "P" par l'initiale du nom)
-                                            var firstLetter = "m";
-                                    
-                                            // Sélectionne l'élément .avatar et ajoute la première lettre à son contenu
-                                            var avatar = document.querySelector(".avatar");
-                                            avatar.textContent = firstLetter;
-                                        });
-                                    </script>
-                                    
-                                    
-                                    <a href="#">mezrag naoufal</a>
-                                    <span class="stars">
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                    </span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    L'agence de communication Arti Web se distingue par sa créativité inspirante et son expertise technologique, offrant des solutions digitales qui donnent vie aux visions de ses clients de manière exceptionnelle.
-                                 </div>
-                                <div class="profile">
-                                    <div class="avatarr">
-                                        S <!-- Remplacez cette lettre par l'initiale du nom de la personne -->
-                                    </div>
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-                                            // Récupère la première lettre du nom (remplacez "P" par l'initiale du nom)
-                                            var firstLetter = "S";
-                                    
-                                            // Sélectionne l'élément .avatar et ajoute la première lettre à son contenu
-                                            var avatar = document.querySelector(".avatarr");
-                                            avatar.textContent = firstLetter;
-                                        });
-                                    </script>
-                                    <a href="#">Sara Badidi</a>
-                                    <span class="stars">
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    ArtiWeb est une agence de marketing digitale remarquable qui se distingue par son expertise, sa créativité et sa capacité à générer des résultats exceptionnels en ligne.
-                                </div>
-                                <div class="profile">
-                                    <div class="avatarrr">
-                                        B <!-- Remplacez cette lettre par l'initiale du nom de la personne -->
-                                    </div>
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-                                            // Récupère la première lettre du nom (remplacez "P" par l'initiale du nom)
-                                            var firstLetter = "B";
-                                    
-                                            // Sélectionne l'élément .avatar et ajoute la première lettre à son contenu
-                                            var avatar = document.querySelector(".avatarrr");
-                                            avatar.textContent = firstLetter;
-                                        });
-                                    </script>
-                                    <a href="#">Bilal Ourdaja</a>
-                                    <span class="stars">
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    Je suis satisfaite de la conception de mon site web et aussi pour le référencement naturel vraiment Arti Web c'est la meilleure agence de marketing digital a Fès, et surtout très bon rapport service / prix .
-                                       Je recommande a toute personne intéressée.
-                                 </div>
-                                <div class="profile">
-                                    <div class="avatarrrr">
-                                        N <!-- Remplacez cette lettre par l'initiale du nom de la personne -->
-                                    </div>
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-                                            // Récupère la première lettre du nom (remplacez "P" par l'initiale du nom)
-                                            var firstLetter = "N";
-                                    
-                                            // Sélectionne l'élément .avatar et ajoute la première lettre à son contenu
-                                            var avatar = document.querySelector(".avatarr");
-                                            avatar.textContent = firstLetter;
-                                        });
-                                    </script>
-                                    <a href="#">NAJIA MALKI</a>
-                                    <span class="stars">
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                        <i class="fas fa-star yellow-star"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                
-                    </div>
-        
-                </div>
-            </div>
-        
+                   
             <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
             <script >// initialize swiper js
         
@@ -1504,4 +1333,4 @@ window.addEventListener('resize', stopVideoScrolling);
 
 
     
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

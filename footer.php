@@ -1,24 +1,24 @@
-<div class="footer wow fadeIn" data-wow-delay="0.3s">
+<div class="footer wow fadeIn" data-wow-delay="0.3s" style="margin-top: 0;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-contact">
-                                <h2>Office Contact</h2>
+                                <h2>Contact Bureau</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>22Q2+62, Ave Mohammed es Slaoui, Fes 30050</p>
-                                <p><i class="fa fa-phone-alt"></i>+0532-432066</p>
-                                <p><i class="fa fa-envelope"></i>Contact@artiweb.ma</p>
+                                <p><i class="fa fa-phone-alt"></i>(+212) 532-432066</p>
+                                <p><i class="fa fa-envelope"></i>contact@artiweb.ma</p>
                                 <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.facebook.com/Artiwebmaroc?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/Artiwebmaroc"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/Artiwebmaroc" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                     <a href="https://www.linkedin.com/company/arti-web/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.instagram.com/artiweb.ma/?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/artiweb.ma" target="_blank"><i class="fab fa-instagram"></i></a>
                                     <a href="https://api.whatsapp.com/send/?phone=%2B212664017447&text&type=phone_number&app_absent=0" target="_blank"><i class="fa fa-whatsapp"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
-                                <h2>Services Areas</h2>
+                                <h2>Nos services</h2>
                                 <a href="">SEO</a>
                                 <a href="">SEA</a>
                                 <a href="">Social ADS</a>
@@ -29,23 +29,21 @@
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
+                                <h2>Pages utiles</h2>
+                                <a href="<?= get_site_url(); ?>/a-propos-artiweb-agence-de-communication/">À propos de nous</a>
+                                <a href="<?= get_site_url(); ?>/contactez-nous/">Contactez-nous</a> 
+                                <a href="<?= get_site_url(); ?>/#projects">Projects</a> 
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="newsletter">
-                                <h2>Newsletter</h2>
+                                <h2>Inscription à la newsletter</h2>
                                 <p>
-                                Discover the latest updates, trends, and advice in the realm of communication and digital marketing by subscribing to our newsletter.
+                                Découvrez les dernières actualités, tendances et conseils dans le domaine de la communication et du marketing digital en vous inscrivant à notre newsletter.
                                 </p>
                                 <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
+                                    <input class="form-control" placeholder="E-mail ici">
+                                    <button class="btn">S'abonner</button>
                                 </div>
                             </div>
                         </div>
@@ -63,12 +61,12 @@
                 <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>&copy; <a href="">ArtiWeb</a>, All Right Reserved.</p>
+                            <p>&copy; <a href="<?= get_site_url(); ?>">ArtiWeb</a>, All Right Reserved.</p>
                         </div>
 						
 						
                         <div class="col-md-6">
-                            <p>ArtiWeb<a href=""> Agence</a></p>
+                            <p>ArtiWeb<a href="<?= get_site_url(); ?>"> Agence</a></p>
                         </div>
                     </div>
                 </div>
